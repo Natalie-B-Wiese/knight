@@ -1,5 +1,8 @@
 class Vertex
-  const SIZE = 8
+  SIZE = 8
+
+  attr_reader :x, :y
+
   def initialize(x, y)
     @x = x
     @y = y

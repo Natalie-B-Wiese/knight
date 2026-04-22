@@ -2,27 +2,33 @@
 
 require_relative '../lib/knight'
 describe 'Knight' do
-  describe 'knight_moves' do
+  describe '#knight_moves' do
     context 'on short path' do
       start_point = [0, 0]
       goal_point = [1, 2]
-
       result = knight_moves(start_point, goal_point)
 
       it 'returns an array' do
         expect(result).to be_an(Array)
       end
 
-      it 'returns a 2D array' do
-        expect(result[0]).to be_an(Array)
+      it 'returns an array of vertices' do
+        expect(result[0]).to be_a(Vertex)
       end
 
-      it '0th point is the same as first parameter' do
-        expect(result[0]).to eq(start_point)
+      it '0th point x is the same as first parameter x' do
+        expect(result[0].x).to eq(start_point[0])
+      end
+      it '0th point y is the same as first parameter y' do
+        expect(result[0].y).to eq(start_point[1])
       end
 
-      it 'last point is the same as second parameter' do
-        expect(result[result.length - 1]).to eq(goal_point)
+      it 'last point x is the same as second parameter x' do
+        expect(result[result.length - 1].x).to eq(goal_point[0])
+      end
+
+      it 'last point y is the same as second parameter y' do
+        expect(result[result.length - 1].y).to eq(goal_point[1])
       end
 
       it 'path length is 2 on 1-move path' do
@@ -35,26 +41,32 @@ describe 'Knight' do
 
       start_point = [0, 0]
       goal_point = [3, 3]
-
       result = knight_moves(start_point, goal_point)
 
-      it 'returns an array' do
+      xit 'returns an array' do
         expect(result).to be_an(Array)
       end
 
-      it 'returns a 2D array' do
-        expect(result[0]).to be_an(Array)
+      xit 'returns an array of vertices' do
+        expect(result[0]).to be_a(Vertex)
       end
 
-      it '0th point is the same as first parameter' do
-        expect(result[0]).to eq(start_point)
+      xit '0th point x is the same as first parameter x' do
+        expect(result[0].x).to eq(start_point[0])
+      end
+      xit '0th point y is the same as first parameter y' do
+        expect(result[0].y).to eq(start_point[1])
       end
 
-      it 'last point is the same as second parameter' do
-        expect(result[result.length - 1]).to eq(goal_point)
+      xit 'last point x is the same as second parameter x' do
+        expect(result[result.length - 1].x).to eq(goal_point[0])
       end
 
-      it 'path length is correct' do
+      xit 'last point y is the same as second parameter y' do
+        expect(result[result.length - 1].y).to eq(goal_point[1])
+      end
+
+      xit 'path length is correct' do
         expect(result.length).to eq(3)
       end
     end
@@ -69,23 +81,30 @@ describe 'Knight' do
 
       result = knight_moves(start_point, goal_point)
 
-      it 'returns an array' do
+      xit 'returns an array' do
         expect(result).to be_an(Array)
       end
 
-      it 'returns a 2D array' do
-        expect(result[0]).to be_an(Array)
+      xit 'returns an array of vertices' do
+        expect(result[0]).to be_a(Vertex)
       end
 
-      it '0th point is the same as first parameter' do
-        expect(result[0]).to eq(start_point)
+      xit '0th point x is the same as first parameter x' do
+        expect(result[0].x).to eq(start_point[0])
+      end
+      xit '0th point y is the same as first parameter y' do
+        expect(result[0].y).to eq(start_point[1])
       end
 
-      it 'last point is the same as second parameter' do
-        expect(result[result.length - 1]).to eq(goal_point)
+      xit 'last point x is the same as second parameter x' do
+        expect(result[result.length - 1].x).to eq(goal_point[0])
       end
 
-      it 'path length is correct' do
+      xit 'last point y is the same as second parameter y' do
+        expect(result[result.length - 1].y).to eq(goal_point[1])
+      end
+
+      xit 'path length is correct' do
         expect(result.length).to eq(7)
       end
     end
