@@ -10,6 +10,17 @@ def knight_moves(start_point, goal_point)
   return path unless path.nil?
 
   print 'try again'
+  path = []
+  path.push(current_vertex)
+
+  leaves = valid_leaves(current_vertex, path)
+  leaves.each do |leaf|
+    path2 = single_move_to_goal(leaf, goal_point, path)
+
+    return path2 unless path2.nil?
+  end
+
+  print 'try yet again'
 
   path
 end
