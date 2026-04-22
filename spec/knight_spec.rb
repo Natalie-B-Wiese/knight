@@ -16,19 +16,12 @@ describe 'Knight' do
         expect(result[0]).to be_a(Vertex)
       end
 
-      it '0th point x is the same as first parameter x' do
-        expect(result[0].x).to eq(start_point[0])
-      end
-      it '0th point y is the same as first parameter y' do
-        expect(result[0].y).to eq(start_point[1])
+      it '0th point is the same as first parameter' do
+        expect(result[0]).to eq(start_point)
       end
 
-      it 'last point x is the same as second parameter x' do
-        expect(result[result.length - 1].x).to eq(goal_point[0])
-      end
-
-      it 'last point y is the same as second parameter y' do
-        expect(result[result.length - 1].y).to eq(goal_point[1])
+      it 'last point is the same as second parameter' do
+        expect(result[result.length - 1]).to eq(goal_point)
       end
 
       it 'path length is 2 on 1-move path' do
@@ -51,19 +44,12 @@ describe 'Knight' do
         expect(result[0]).to be_a(Vertex)
       end
 
-      xit '0th point x is the same as first parameter x' do
-        expect(result[0].x).to eq(start_point[0])
-      end
-      xit '0th point y is the same as first parameter y' do
-        expect(result[0].y).to eq(start_point[1])
+      xit '0th point is the same as first parameter' do
+        expect(result[0]).to eq(start_point)
       end
 
-      xit 'last point x is the same as second parameter x' do
-        expect(result[result.length - 1].x).to eq(goal_point[0])
-      end
-
-      xit 'last point y is the same as second parameter y' do
-        expect(result[result.length - 1].y).to eq(goal_point[1])
+      xit 'last point is the same as second parameter' do
+        expect(result[result.length - 1]).to eq(goal_point)
       end
 
       xit 'path length is correct' do
@@ -89,19 +75,12 @@ describe 'Knight' do
         expect(result[0]).to be_a(Vertex)
       end
 
-      xit '0th point x is the same as first parameter x' do
-        expect(result[0].x).to eq(start_point[0])
-      end
-      xit '0th point y is the same as first parameter y' do
-        expect(result[0].y).to eq(start_point[1])
+      xit '0th point is the same as first parameter' do
+        expect(result[0]).to eq(start_point)
       end
 
-      xit 'last point x is the same as second parameter x' do
-        expect(result[result.length - 1].x).to eq(goal_point[0])
-      end
-
-      xit 'last point y is the same as second parameter y' do
-        expect(result[result.length - 1].y).to eq(goal_point[1])
+      xit 'last point is the same as second parameter' do
+        expect(result[result.length - 1]).to eq(goal_point)
       end
 
       xit 'path length is correct' do

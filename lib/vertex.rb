@@ -28,4 +28,19 @@ class Vertex
     shift_x(x_amount)
     shift_y(y_amount)
   end
+
+  def ==(other)
+    # Check if other is the same class and has same attributes
+    if other.is_a?(Array) && other.length == 2
+      @x = other[0] && @y == other[1]
+    else
+      return false unless other.is_a?(Vertex)
+
+      @x == other.x && @y == other.y
+    end
+  end
+
+  def eql?(other)
+    self == other
+  end
 end
