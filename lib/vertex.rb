@@ -32,7 +32,7 @@ class Vertex
   def ==(other)
     # Check if other is the same class and has same attributes
     if other.is_a?(Array) && other.length == 2
-      @x = other[0] && @y == other[1]
+      @x == other[0] && @y == other[1]
     else
       return false unless other.is_a?(Vertex)
 
@@ -42,5 +42,9 @@ class Vertex
 
   def eql?(other)
     self == other
+  end
+
+  def to_s
+    "(#{@x}, #{@y})"
   end
 end
