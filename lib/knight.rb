@@ -2,15 +2,36 @@ require_relative 'vertex'
 
 def knight_moves(start_point, goal_point)
   path = []
+  all_paths = []
 
   current_vertex = Vertex.new(start_point[0], start_point[1])
 
-  path.push(current_vertex)
+  path = single_move_to_goal(current_vertex, goal_point, [])
+  return path unless path.nil?
 
-  leaves = valid_leaves(current_vertex, path)
-  p leaves
+  print 'try again'
 
   path
+end
+
+# attempts to do a single move to arrive at the goal and returns the path
+# If a move cannot be done to arrive at the goal, it is nil
+def single_move_to_goal(current_vertex, goal_point, path = [])
+  print "#{path}\n"
+
+  path_copy = path.dup
+  path_copy.push(current_vertex)
+
+  leaves = valid_leaves(current_vertex, path_copy)
+  leaves.each do |leaf|
+    next unless leaf == goal_point
+
+    puts "Leaf #{leaf} is equal to the goal #{goal_point}"
+    path_copy += [leaf]
+    return path_copy
+  end
+
+  nil
 end
 
 # returns an array of valid next points
