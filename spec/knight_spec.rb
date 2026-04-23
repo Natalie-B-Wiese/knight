@@ -67,23 +67,23 @@ describe 'Knight' do
 
       result = knight_moves(start_point, goal_point)
 
-      xit 'returns an array' do
+      it 'returns an array' do
         expect(result).to be_an(Array)
       end
 
-      xit 'returns an array of vertices' do
+      it 'returns an array of vertices' do
         expect(result[0]).to be_a(Vertex)
       end
 
-      xit '0th point is the same as first parameter' do
+      it '0th point is the same as first parameter' do
         expect(result[0]).to eq(start_point)
       end
 
-      xit 'last point is the same as second parameter' do
+      it 'last point is the same as second parameter' do
         expect(result[result.length - 1]).to eq(goal_point)
       end
 
-      xit 'path length is correct' do
+      it 'path length is correct' do
         expect(result.length).to eq(7)
       end
     end
