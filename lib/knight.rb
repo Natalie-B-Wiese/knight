@@ -65,8 +65,6 @@ end
 # attempts to do a single move to arrive at the goal and returns the path
 # If a move cannot be done to arrive at the goal, it is nil
 def single_move_to_goal(current_vertex, path = [])
-  # print "#{path}\n"
-
   all_paths = []
 
   path_copy = path.dup
